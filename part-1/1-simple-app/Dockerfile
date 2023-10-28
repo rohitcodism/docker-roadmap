@@ -11,6 +11,6 @@ FROM node:alpine as main
 COPY --from=build /usr/src/app /
 
 
-EXPOSE 5000
+EXPOSE 3000
 
 CMD ["node", "index.js"]
