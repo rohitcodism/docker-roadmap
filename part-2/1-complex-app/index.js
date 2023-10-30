@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 // Set up mongoose connection
-mongoose.connect("mongodb://mongdb2:27017/mydatabase", {});
+mongoose.connect("mongodb://complex-mongo:27017/mydatabase", {});
 
 const EntrySchema = new mongoose.Schema({
   text: String,
@@ -16,7 +16,7 @@ const Entry = mongoose.model('Entry', EntrySchema);
 
 app.get('/', async (req, res) => {
   try {
-    const entry = new Entry({ text: 'This is an entry by harkirat' });
+    const entry = new Entry({ text: 'This is an entry by rohit' });
     await entry.save();
     res.send('Entry added!');
   } catch (err) {
